@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     
-  fetch("http://localhost:5000/api/products")
+  fetch("https://e-commerce-website-1b43.vercel.app/api/products")
     .then((response) => response.json())
     .then((data) => {
       console.log("Products from MongoDB:", data);
@@ -334,8 +334,8 @@ const [isLogin, setIsLogin] = useState(true);
   const password = isLogin ? inputs[1]?.value : inputs[2]?.value;
 
   const endpoint = isLogin
-    ? "http://localhost:5000/api/auth/login"
-    : "http://localhost:5000/api/auth/register";
+    ? "https://e-commerce-website-1b43.vercel.app/api/auth/login"
+    : "https://e-commerce-website-1b43.vercel.app/api/auth/register";
 
   const response = await fetch(endpoint, {
     method: "POST",
